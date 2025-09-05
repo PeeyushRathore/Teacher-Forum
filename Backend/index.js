@@ -9,9 +9,29 @@ dotenv.config();
 
 require("./db");
 
-const allowedOrigins = [process.env.FRONTEND_URL]; // Add more origins as needed
+// ✅ Explicitly list allowed origins
+const allowedOrigins = [
+  "http://localhost:5000", // deployed frontend
+];
 
-app.use(cors());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // ✅ required if you use cookies or Authorization headers
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+// ✅ Handle preflight requests
+app.options("*", cors());
+
 app.use(bodyParser.json());
 app.use(
   cookieParser({
