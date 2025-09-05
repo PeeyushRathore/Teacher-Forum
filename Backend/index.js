@@ -14,14 +14,10 @@ const allowedOrigins = [process.env.FRONTEND_URL]; // Add more origins as needed
 //app.use(cors());
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
+    origin: ["http://localhost:3000", "https://teacher-forum.vercel.app"],
+    credentials: true, // if you're sending cookies or auth headers
+    methods: ["GET", "POST", "PUT", "DELETE"], // allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // allowed headers
   })
 );
 app.use(bodyParser.json());
