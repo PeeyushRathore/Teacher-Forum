@@ -2,7 +2,7 @@
   "name": "mastersgang",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://teacher-forum.vercel.app/",
+  "proxy": "https://teacher-forum-main.vercel.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
