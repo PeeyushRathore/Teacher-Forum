@@ -11,7 +11,8 @@ require("./db");
 
 // ✅ Explicitly list allowed origins
 const allowedOrigins = [
-  "http://localhost:3000", // deployed frontend
+  "http://localhost:3000",
+  "https://teacher-forum-frontend.vercel.app", // deployed frontend
 ];
 
 app.use(
