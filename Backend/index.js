@@ -14,7 +14,7 @@ const allowedOrigins = [process.env.FRONTEND_URL]; // Add more origins as needed
 //app.use(cors());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://teacher-forum.vercel.app"],
+    origin: ["http://localhost:3000/login", "https://teacher-forum.vercel.app"],
     credentials: true, // if you're sending cookies or auth headers
     methods: ["GET", "POST", "PUT", "DELETE"], // allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // allowed headers
