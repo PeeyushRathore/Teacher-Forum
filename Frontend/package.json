@@ -2,6 +2,7 @@
   "name": "mastersgang",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://vercel.com/peeyush-rathores-projects/teacher-forum/Hc5ZnaPw3RWkMP2Rj4by1ukumsmP",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
