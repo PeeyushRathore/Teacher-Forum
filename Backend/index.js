@@ -11,7 +11,7 @@ require("./db");
 
 // ✅ Explicitly list allowed origins
 const allowedOrigins = [
-  "http://localhost:5000", // deployed frontend
+  "http://localhost:3000", // deployed frontend
 ];
 
 app.use(
